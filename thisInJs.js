@@ -1,7 +1,7 @@
 // we are going to see the 'this' keyword in javaScript
 
 /*
--this keyword/variable: is a special variable that is created for every ececution context(every function)
+-this keyword/variable: is a special variable that is created for every execution context(every function)
 takes the value of(points to) the "owner" of  the function in which the this keyword is used 
 
 -"this " is not a static, it depend on how the function  is called ,and its value is only assigned when 
@@ -9,11 +9,11 @@ the function is actually called.
 
 - the value of the this keyword is not static.So it's not always the same.It depends on how the function is actually called.
 
--this keyword again, depends on the way in which a function is called.But what does that actually mean?Well, let's analyze four different ways
+-the "this" keyword again, depends on the way in which a function is called.But what does that actually mean?Well, let's analyze four different ways
 in which functions can be called.
 
 1.the first way to call a function is as a method.
-    - the this keyword inside that method will simply point to the object on which the method is called.
+    - the "this" keyword inside that method will simply point to the object on which the method is called.
     - or in other words,it points to the object that is calling the method.
     eg. 
      
@@ -95,7 +95,7 @@ const calcAgeArr = (birthYear) => {
 };
 calcAgeArr(1991);
 
-//let's try to use the disc keyword inside of a method.
+//let's try to use the "this" keyword inside of a method.
 const luul = {
   //luul object
   year: 1991,
@@ -116,7 +116,7 @@ So here we wrote the calcAge method inside
 of the luul object.And so we might think
 that  is the reason why the this keyword points
 to luul, but that is not true.
-The reason that the disc keyword will point
+The reason that the this keyword will point
 to luul in this case is
 because luul was the object calling the method
  */
@@ -126,6 +126,6 @@ because luul was the object calling the method
 const matilda = {
   year: 2017,
 };
-matilda.calcAge = luul.calcAge; // copy calcAge method from luul to matilda  // method barrowing
+matilda.calcAge = luul.calcAge; // copy calcAge method from luul to matilda object // method barrowing
 matilda.calcAge(); //here the this keyword  points to matilda object not to luul object  becouse matilda is the one who called the method it  that proof the
 */
