@@ -265,7 +265,7 @@ and execution will go back
 to the previous execution context.
 
 
-note: the global excection context is the first to go to the stuck but then the other excection context if there is created will be
+note: the global excection context is the first to go to the stack but then the other excection context if there is created will be
  on top of it and like so on  , then  the excecution context in the top is first to remove from the stack when its done its work 
  the the prvious EC and so on . its like  LAST IN FIRST OUT (LIFO)      IN THAT STACK.
 
