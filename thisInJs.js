@@ -330,7 +330,7 @@ const sam = {
 
 // then make  shallow copy  to marriedSam
 
-const marriedSam = Object.assign({}, sam); //here we copy sam object to the empty marredSam object
+const merriedSam = Object.assign({}, sam); //here we copy sam object to the empty marredSam object
 merriedSam.family.push("Adam");
 merriedSam.family.push("diana");
 merriedSam.lastName = "Mike"; //now marredsum changed her last name  but the orginal sams lastname is not changed
