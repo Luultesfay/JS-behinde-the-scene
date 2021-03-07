@@ -27,7 +27,7 @@ in which functions can be called.
         
     }
 
-    luul.calcAge();//48      the method is called
+    luul.calcAge();//48      the method is called  and then the this keyword is point to the object luul becouse luu is calling the method
 
 2.   another way we call functions is by simply calling them as normal functions.
      -So not as a method and so not attached to any object.In this case,the "this" keyword,will simply be undefined.
@@ -78,7 +78,7 @@ that the handler function is attached to.
 "use strict";
 console.log(this); //this keyword  pointes to  globsl window
 
-//lets see the this keyword inside regular function
+//lets see the this keyword inside regular function expression
 const calcAge = function (birthYear) {
   console.log(2037 - birthYear);
   console.log(this); //the this keyword  is point to  undefined in strict mode but when there is no strict mode it point to the global window
@@ -89,7 +89,7 @@ calcAge(1991);
 
 const calcAgeArr = (birthYear) => {
   console.log(2037 - birthYear);
-  console.log(this); //the this keyword  is point to global window  becouse arrow function dosent have its owen this key word
+  console.log(this); //the this keyword  is point to global window  becouse arrow function dosent have its own this keyword
   //So instead the arrow function simply uses the lexical this keyword, which means that it uses the this keyword
   // of its parent function or of its parents scope. in this case  the parent scope is   console.log(this);  in the firstline  above
 };
@@ -122,13 +122,13 @@ because luul was the object calling the method
  */
 
 // lets make it clear  that the this keyword is point to the object who called it
-/*
+
 const matilda = {
   year: 2017,
 };
 matilda.calcAge = luul.calcAge; // copy calcAge method from luul to matilda object // method barrowing
 matilda.calcAge(); //here the this keyword  points to matilda object not to luul object  becouse matilda is the one who called the method it  that proof the
-*/
+console.log(matilda);
 
 // we will see regular function vs arrow function
 

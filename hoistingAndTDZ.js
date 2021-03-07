@@ -15,10 +15,10 @@ eg.
 const myName='jonas';
 
 if(myName==='Jonas'){
-    console.log(`jonas is a ${job}`);
+    console.log(`jonas is a ${job}`);//job is not accesible at this stage becouse its in TDZ mode  so this  will be error
     const age=2037-1989;
     console.log(age);
-    const job='teacher';
+    const job='teacher';//now job can be accecible after intialization   only, so at this point  TDZ is lifted and can be used variable job 
     console.log(x);
 }
 */
@@ -26,8 +26,8 @@ if(myName==='Jonas'){
 "use strict";
 if (myName === "Jonas") {
   console.log(`jonas is a ${job}`); //(this line of code is reference error due to ${age} )temporal dead zone  becouse can not access the job before initalization
-  const age = 2037 - 1989; //temporal dead zone
-  console.log(age); //temporal dead zone
+  const age = 2037 - 1989;
+  console.log(age);
   const job = "teacher"; // the dead zone is lifted  becouse it reached the  varible intialization
   console.log(x); //refrence error x is not defined
 }
@@ -57,7 +57,7 @@ const year = 1991; //same as let variable
 //HOISTING  WITH FUNCTIONS
 
 // we will first call the functions before they are declaired
-console.log(addDecl(2, 3)); //this will give us the hoisted result of  5   becouse regular function decleration can be used before declearred
+console.log(addDecl(2, 3)); //this will give us the hoisted result of  5   becouse regular function decleration can be used before declared
 console.log(addExpr(2, 3)); //this will give us  reference error b/c function  expression can not access before intialization
 console.log(addArrow(2, 3));
 
@@ -68,7 +68,7 @@ function addDecl(a, b) {
 //this is function expression
 const addExpre = function (a, b) {
   //untill this point this function expresion is in TDZ only access after this intialization point
-  //note that  function expression decleared with const or let they cant access before they are intialized
+  //note that  function expression decleared with const or let they can't access before they are intialized
   return a + b;
 };
 
