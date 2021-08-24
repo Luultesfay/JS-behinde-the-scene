@@ -186,8 +186,8 @@ const addExpr = function (a, b) {
   console.log(arguments); //accept more parameters than we actually specified.
   return a + b;
 };
-addExpr(2, 5);
-addExpr(2, 5, 8, 12); //argument passed
+console.log(addExpr(2, 5));
+console.log(addExpr(2, 6, 8, 12)); //argument passed
 
 //var addArrow = (a, b) => {
 //console.log(arguments);
@@ -236,10 +236,7 @@ let lastName = "negasi";
 let oldLastName = lastName;
 lastName = "hagos";
 
-console.log(
-  lastName,
-  oldLastName
-); /*as we would expect in an intuitive way.
+console.log(lastName, oldLastName); /*as we would expect in an intuitive way.
 Now, remember, that it works this way
 because each primitive value will simply be saved
 into its own piece of memory in the stack, okay?
